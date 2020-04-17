@@ -61,9 +61,9 @@ class SingleButton extends StatelessWidget {
 
 class ButtonClipper extends CustomClipper<Path> {
   final double radius;
-  final int positon;
+  final int position;
 
-  ButtonClipper(this.radius, this.positon);
+  ButtonClipper(this.radius, this.position);
 
   @override
   Path getClip(Size size) {
@@ -91,11 +91,11 @@ class ButtonClipper extends CustomClipper<Path> {
   }
 
   Offset getOffset(Size size) {
-    if (positon == 0) {
+    if (position == 0) {
       return Offset(size.width / 2, size.height);
-    } else if (positon == 1) {
+    } else if (position == 1) {
       return Offset(size.width, size.height / 2);
-    } else if (positon == 2) {
+    } else if (position == 2) {
       return Offset(0, size.height / 2);
     } else {
       return Offset(size.width / 2, 0);
